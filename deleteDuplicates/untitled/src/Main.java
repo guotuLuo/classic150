@@ -23,7 +23,13 @@ public class Main {
         ListNode head = deleteDuplicates(n1);
         printList(head);
     }
-
+    public static void printList(ListNode head){
+        ListNode temp = head;
+        while (temp != null){
+            System.out.println(temp.val);
+            temp = temp.next;
+        }
+    }
     public static ListNode deleteDuplicates(ListNode head) {
         ListNode dummyNode = new ListNode();
         dummyNode.next = head;
@@ -47,11 +53,5 @@ public class Main {
         return dummyNode.next;
     }
 
-    public static void printList(ListNode head){
-        ListNode temp = head;
-        while (temp != null){
-            System.out.println(temp.val);
-            temp = temp.next;
-        }
-    }
+
 }
